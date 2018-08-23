@@ -1,0 +1,10 @@
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\PublicTransport.exe.config
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\PublicTransport.exe
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\PublicTransport.pdb
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\obj\Debug\PublicTransport.csprojAssemblyReference.cache
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\obj\Debug\PublicTransport.csproj.CoreCompileInputs.cache
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\obj\Debug\PublicTransport.exe
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\obj\Debug\PublicTransport.pdb
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\Newtonsoft.Json.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\Newtonsoft.Json.xml
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\obj\Debug\PublicTransport.csproj.CopyComplete
