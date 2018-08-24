@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MyLibrary;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,30 +21,14 @@ namespace PublicTransport
             String latitude = "45.18521853612248";
             Int32 distance = 600;
 
-            // Create a request for the URL.   
-            WebRequest request = WebRequest.Create(
-                  "http://data.metromobilite.fr/api/linesNear/json?x=" + longitude + "&y=" + latitude + "&dist=" + distance + "&details=true");
-            // If required by the server, set the credentials.  
-            request.Credentials = CredentialCache.DefaultCredentials;
-            // Get the response.  
-            WebResponse response = request.GetResponse();
-            // Display the status.  
-            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
-            // Get the stream containing content returned by the server.  
-            Stream dataStream = response.GetResponseStream();
-            // Open the stream using a StreamReader for easy access.  
-            StreamReader reader = new StreamReader(dataStream);
-            // Read the content.  
-            string responseFromServer = reader.ReadToEnd();
-            // Display the content.  
-            //Console.WriteLine(responseFromServer);
-            
-            List<BusStationObject> busStation = JsonConvert.DeserializeObject<List<BusStationObject>>(responseFromServer);
+            Connexion cx = new Connexion();
+            String url = "http://data.metromobilite.fr/api/linesNear/json?x=" + longitude + "&y=" + latitude + "&dist=" + distance + "&details=true";
+            List<BusStationObject> busStation = JsonConvert.DeserializeObject<List<BusStationObject>>(cx.ApiConnexion(url));
             //cette ligne convertit la réponse qui est au format json en collection d'objets C#
 
             //remove doublons
-            Toolbox tb = new Toolbox();
-              Dictionary<string, List<string>> resultat = tb.removeDuplicate(busStation);
+            Unduplicate lb = new Unduplicate();
+            Dictionary<string, List<string>> resultat = lb.removeDuplicate(busStation);
 
             //affichage du resultat
             foreach (KeyValuePair<string, List<string>> kvp in resultat)
@@ -57,10 +42,6 @@ namespace PublicTransport
                 }
             }
 
-            // Clean up the streams and the response.  
-            reader.Close();
-            response.Close();
-            dataStream.Close();
         }
 
 

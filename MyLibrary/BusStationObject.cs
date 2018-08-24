@@ -8,7 +8,6 @@ namespace PublicTransport
 {
      public class BusStationObject
     {
-   
             public string id { get; set; }
             public string name { get; set; }
             public double lon { get; set; }

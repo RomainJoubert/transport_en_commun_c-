@@ -8,3 +8,5 @@ C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\obj\Debug\P
 C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\Newtonsoft.Json.dll
 C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\Newtonsoft.Json.xml
 C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\obj\Debug\PublicTransport.csproj.CopyComplete
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\MyLibrary.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\PublicTransport\bin\Debug\MyLibrary.pdb
