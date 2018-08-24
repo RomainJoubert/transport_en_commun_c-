@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BusStationObject.cs" />
     <Compile Include="Connexion.cs" />
+    <Compile Include="DetailsTransport.cs" />
     <Compile Include="Unduplicate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

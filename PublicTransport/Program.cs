@@ -26,6 +26,11 @@ namespace PublicTransport
             List<BusStationObject> busStation = JsonConvert.DeserializeObject<List<BusStationObject>>(cx.ApiConnexion(url));
             //cette ligne convertit la réponse qui est au format json en collection d'objets C#
 
+            //2ème connexion api pour récupérer les détails de chaque ligne
+            Connexion tag = new Connexion();
+            String urlTag = "http://data.metromobilite.fr/api/routers/default/index/routes";
+            List<DetailsTransport> detailStation = JsonConvert.DeserializeObject<List<DetailsTransport>>(tag.ApiConnexion(urlTag));
+
             //remove doublons
             Unduplicate lb = new Unduplicate();
             Dictionary<string, List<string>> resultat = lb.removeDuplicate(busStation);
@@ -34,18 +39,22 @@ namespace PublicTransport
             foreach (KeyValuePair<string, List<string>> kvp in resultat)
             {
                 Console.WriteLine("Arret = " + kvp.Key);
-                
+
                 foreach (string line in kvp.Value)
                 {
-                    int delimiter = line.IndexOf(":");
-                    Console.WriteLine("      Ligne = " + line.Substring(delimiter+1));
+
+                    foreach (DetailsTransport detail in detailStation)
+                    {
+                        if (detail.id.Equals(line))
+                        {
+                           // int delimiter = line.IndexOf(":");
+                            Console.WriteLine("      Ligne = " + detail.shortName + "       couleur ligne = " + detail.color + " nom ligne = " +detail.longName);
+                        }
+                    }
                 }
             }
 
         }
 
-
-
- 
     }
 }
