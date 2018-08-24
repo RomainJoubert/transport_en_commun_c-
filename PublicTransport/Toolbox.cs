@@ -8,46 +8,36 @@ namespace PublicTransport
 {
     class Toolbox
     {
-    //    public Dictionary RemoveDuplicate(Object test)
-    //    {
-    //        foreach (BusStationObject station in busStation)
+        public Dictionary<string, List<string>> removeDuplicate(List<BusStationObject> liste)
+        {
+            Dictionary<string, List<string>> myDictionary =
+                new Dictionary<string, List<string>>();
 
-    //        {
-    //            try
-    //            {
-    //                if (!leilaReveilleToi.ContainsKey(station.name))
-    //                {
-    //                    leilaReveilleToi.Add(station.name, station.lines);
-    //                }
-    //                else
-    //                {
-    //                    Console.WriteLine("Nb lines : " + station.lines.Count);
-    //                    foreach (string line in station.lines)
-    //                    {
-    //                        if (!leilaReveilleToi[station.name].Contains(line))
-    //                        {
-    //                            leilaReveilleToi[station.name].Add(line);
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //            catch (ArgumentException)
-    //            {
-    //                Console.WriteLine("An element with Key = " + station.name + " already exists.");
-    //            }
-
-    //        }
-
-    //        //affichage du dictionnaire
-    //        foreach (KeyValuePair<string, List<string>> kvp in leilaReveilleToi)
-    //        {
-    //            Console.WriteLine("Arret = " + kvp.Key);
-    //            foreach (string line in kvp.Value)
-    //            {
-    //                Console.WriteLine("      Ligne = " + line);
-    //            }
-    //            return Dictionary;
-    //        }
-    //    }
-    }
+            foreach (BusStationObject station in liste)
+            {
+                try
+                {
+                    if (!myDictionary.ContainsKey(station.name))
+                    {
+                        myDictionary.Add(station.name, station.lines);
+                    }
+                    else
+                    {
+                        foreach (string line in station.lines)
+                        {
+                            if (!myDictionary[station.name].Contains(line))
+                            {
+                                myDictionary[station.name].Add(line);
+                            }
+                        }
+                    }
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine("An element with Key = " + station.name + " already exists.");
+                }
+            }
+            return myDictionary;
+        }
+     }
 }

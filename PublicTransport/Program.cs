@@ -16,12 +16,9 @@ namespace PublicTransport
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
 
-
             String longitude = "5.726744267129334";
             String latitude = "45.18521853612248";
             Int32 distance = 600;
-
-
 
             // Create a request for the URL.   
             WebRequest request = WebRequest.Create(
@@ -44,16 +41,30 @@ namespace PublicTransport
             List<BusStationObject> busStation = JsonConvert.DeserializeObject<List<BusStationObject>>(responseFromServer);
             //cette ligne convertit la réponse qui est au format json en collection d'objets C#
 
-            Dictionary<string, List<string>> leilaReveilleToi =
-                new Dictionary<string, List<string>>();
+            //remove doublons
+            Toolbox tb = new Toolbox();
+              Dictionary<string, List<string>> resultat = tb.removeDuplicate(busStation);
+
+            //affichage du resultat
+            foreach (KeyValuePair<string, List<string>> kvp in resultat)
+            {
+                Console.WriteLine("Arret = " + kvp.Key);
+                
+                foreach (string line in kvp.Value)
+                {
+                    int delimiter = line.IndexOf(":");
+                    Console.WriteLine("      Ligne = " + line.Substring(delimiter+1));
+                }
+            }
 
             // Clean up the streams and the response.  
             reader.Close();
             response.Close();
             dataStream.Close();
-            
         }
-       
 
+
+
+ 
     }
 }
