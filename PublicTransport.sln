@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicTransport", "PublicTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary", "MyLibrary\MyLibrary.csproj", "{0DBB5BC1-D906-44C6-9B97-2D84FCE47D2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectTransportPublic", "UnitTestProjectTransportPublic\UnitTestProjectTransportPublic.csproj", "{C5F67B32-7570-44F7-A349-B68C9A311546}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0DBB5BC1-D906-44C6-9B97-2D84FCE47D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DBB5BC1-D906-44C6-9B97-2D84FCE47D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DBB5BC1-D906-44C6-9B97-2D84FCE47D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F67B32-7570-44F7-A349-B68C9A311546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F67B32-7570-44F7-A349-B68C9A311546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F67B32-7570-44F7-A349-B68C9A311546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F67B32-7570-44F7-A349-B68C9A311546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

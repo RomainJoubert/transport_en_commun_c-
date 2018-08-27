@@ -1,0 +1,17 @@
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Test.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Test.pdb
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\obj\Debug\Test.dll
+C:\Users\romain.joubert\source\repos\PublicTransport\Test\obj\Debug\Test.pdb

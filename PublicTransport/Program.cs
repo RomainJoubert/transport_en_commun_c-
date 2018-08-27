@@ -19,11 +19,11 @@ namespace PublicTransport
 
             String longitude = "5.726744267129334";
             String latitude = "45.18521853612248";
-            Int32 distance = 600;
+            Int32 distance = 400;
 
-            Connexion cx = new Connexion();
-            String url = "http://data.metromobilite.fr/api/linesNear/json?x=" + longitude + "&y=" + latitude + "&dist=" + distance + "&details=true";
-            List<BusStationObject> busStation = JsonConvert.DeserializeObject<List<BusStationObject>>(cx.ApiConnexion(url));
+            //Connexion cx = new Connexion();
+            //String url = "http://data.metromobilite.fr/api/linesNear/json?x=" + longitude + "&y=" + latitude + "&dist=" + distance + "&details=true";
+            //List<BusStationObject> busStation = JsonConvert.DeserializeObject<List<BusStationObject>>(cx.ApiConnexion(url));
             //cette ligne convertit la réponse qui est au format json en collection d'objets C#
 
             //2ème connexion api pour récupérer les détails de chaque ligne
@@ -32,8 +32,8 @@ namespace PublicTransport
             List<DetailsTransport> detailStation = JsonConvert.DeserializeObject<List<DetailsTransport>>(tag.ApiConnexion(urlTag));
 
             //remove doublons
-            Unduplicate lb = new Unduplicate();
-            Dictionary<string, List<string>> resultat = lb.removeDuplicate(busStation);
+            Unduplicate lb = new Unduplicate(new Connexion());
+            Dictionary<string, List<string>> resultat = lb.removeDuplicate(latitude, longitude, distance);
 
             //affichage du resultat
             foreach (KeyValuePair<string, List<string>> kvp in resultat)
@@ -45,7 +45,7 @@ namespace PublicTransport
 
                     foreach (DetailsTransport detail in detailStation)
                     {
-                        if (detail.id.Equals(line))
+                        if (detail.id.Contains(line))
                         {
                            // int delimiter = line.IndexOf(":");
                             Console.WriteLine("      Ligne = " + detail.shortName + "       couleur ligne = " + detail.color + " nom ligne = " +detail.longName);

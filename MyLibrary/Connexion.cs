@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyLibrary
 {
-    public class Connexion
+    public class Connexion : IConnexion
     {
        public String ApiConnexion(string url)
         {
