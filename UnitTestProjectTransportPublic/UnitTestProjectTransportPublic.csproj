@@ -48,7 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnexionTests.cs" />
+    <Compile Include="DataDetailsTransportTests.cs" />
     <Compile Include="FakeConnexion.cs" />
     <Compile Include="Resource1.Designer.cs">
       <AutoGen>True</AutoGen>

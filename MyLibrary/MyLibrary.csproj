@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BusStationObject.cs" />
     <Compile Include="Connexion.cs" />
+    <Compile Include="DataDetailsTransport.cs" />
     <Compile Include="DetailsTransport.cs" />
     <Compile Include="IConnexion.cs" />
     <Compile Include="ITransport.cs" />

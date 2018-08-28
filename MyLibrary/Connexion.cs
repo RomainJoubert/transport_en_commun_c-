@@ -19,7 +19,7 @@ namespace MyLibrary
             // Get the response.  
             WebResponse response = request.GetResponse();
             // Display the status.  
-            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+            //Console.WriteLine(((HttpWebResponse)response).StatusDescription);
             // Get the stream containing content returned by the server.  
             Stream dataStream = response.GetResponseStream();
             // Open the stream using a StreamReader for easy access.  
@@ -28,13 +28,11 @@ namespace MyLibrary
             string responseFromServer = reader.ReadToEnd();
             // Display the content.  
 
-
             // Clean up the streams and the response.  
             reader.Close();
             response.Close();
             dataStream.Close();
             return responseFromServer;
-
         }
     }
 }

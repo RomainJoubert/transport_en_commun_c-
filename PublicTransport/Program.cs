@@ -21,11 +21,10 @@ namespace PublicTransport
             String latitude = "45.18521853612248";
             Int32 distance = 400;
 
-            //Connexion cx = new Connexion();
-            //String url = "http://data.metromobilite.fr/api/linesNear/json?x=" + longitude + "&y=" + latitude + "&dist=" + distance + "&details=true";
-            //List<BusStationObject> busStation = JsonConvert.DeserializeObject<List<BusStationObject>>(cx.ApiConnexion(url));
-            //cette ligne convertit la réponse qui est au format json en collection d'objets C#
-
+            //Instance de DataDetailsTransport avec une véritable connexion
+            DataDetailsTransport detail = new DataDetailsTransport(new Connexion());
+                       
+            
             //2ème connexion api pour récupérer les détails de chaque ligne
             Connexion tag = new Connexion();
             String urlTag = "http://data.metromobilite.fr/api/routers/default/index/routes";
@@ -42,15 +41,7 @@ namespace PublicTransport
 
                 foreach (string line in kvp.Value)
                 {
-
-                    foreach (DetailsTransport detail in detailStation)
-                    {
-                        if (detail.id.Contains(line))
-                        {
-                           // int delimiter = line.IndexOf(":");
-                            Console.WriteLine("      Ligne = " + detail.shortName + "       couleur ligne = " + detail.color + " nom ligne = " +detail.longName);
-                        }
-                    }
+                   Console.WriteLine("      Ligne = " + detail.GetDetailsLine(line).shortName + "       couleur ligne = " + detail.GetDetailsLine(line).color + " nom ligne = " + detail.GetDetailsLine(line).longName);
                 }
             }
 

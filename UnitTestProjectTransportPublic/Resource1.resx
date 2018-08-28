@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="jsonDetailLine" xml:space="preserve">
+    <value>[{"id":"SEM:12","shortName":"12","longName":"Eybens Maisons Neuves / Saint-Martin-d'Hères Les Alloves","color":"009930","textColor":"FFFFFF","mode":"BUS","type":"PROXIMO"}]</value>
+  </data>
   <data name="jsonProximityLines" xml:space="preserve">
     <value>[{"id":"SEM:1986","name":"GRENOBLE, CASERNE DE BONNE","lon":5.72533,"lat":45.18506,"lines":["SEM:13","SEM:16","SEM:C4"]},{"id":"SEM:1987","name":"GRENOBLE, CASERNE DE BONNE","lon":5.72542,"lat":45.18509,"lines":["SEM:16"]}]</value>
   </data>

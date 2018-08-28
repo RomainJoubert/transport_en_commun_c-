@@ -20,7 +20,9 @@ namespace MyLibrary.Tests
             Int32 distance = 400;
 
             //remove doublons
-            Unduplicate lb = new Unduplicate(new FakeConnexion());
+            FakeConnexion fake = new FakeConnexion();
+            fake.resultatJson = Resource1.jsonProximityLines;
+            Unduplicate lb = new Unduplicate(fake);
             Dictionary<string, List<string>> resultat = lb.removeDuplicate(latitude, longitude, distance);
             Assert.AreEqual(1 ,resultat.Count);
             Assert.IsTrue(resultat.ContainsKey("GRENOBLE, CASERNE DE BONNE"));
