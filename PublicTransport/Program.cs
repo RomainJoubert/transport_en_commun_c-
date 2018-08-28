@@ -19,7 +19,7 @@ namespace PublicTransport
 
             String longitude = "5.726744267129334";
             String latitude = "45.18521853612248";
-            Int32 distance = 400;
+            Int32 distance = 600;
 
             //Instance de DataDetailsTransport avec une véritable connexion
             DataDetailsTransport detail = new DataDetailsTransport(new Connexion());
@@ -43,6 +43,7 @@ namespace PublicTransport
                 {
                    Console.WriteLine("      Ligne = " + detail.GetDetailsLine(line).shortName + "       couleur ligne = " + detail.GetDetailsLine(line).color + " nom ligne = " + detail.GetDetailsLine(line).longName);
                 }
+
             }
 
         }

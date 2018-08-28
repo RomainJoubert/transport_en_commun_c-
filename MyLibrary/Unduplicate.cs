@@ -47,6 +47,7 @@ namespace MyLibrary
                 {
                     Console.WriteLine("An element with Key = " + station.name + " already exists.");
                 }
+                myDictionary[station.name] = myDictionary[station.name].Distinct().ToList(); //pour enlever les doublons qui viennent de l'
             }
             return myDictionary;
         }
