@@ -52,6 +52,28 @@ namespace MyLibrary
             return myDictionary;
         }
 
+        //Méthode créant un dictionary <String, list<DetailsTransport>> 
+        public Dictionary<String, List<DetailsTransport>> GetProximityLines (String latitude, String longitude, Int32 distance)
+        {
+            //Instance d'un nouveau dictionary 
+            Dictionary<String, List<DetailsTransport>> dicoProximityLines = new Dictionary<String, List<DetailsTransport>>();
+            //Récupérer le dictionnaire de base 
+            Dictionary<String, List<String>> dicoSimple = removeDuplicate(latitude, longitude, distance);
+
+            foreach (KeyValuePair<String, List<String>> kvp in dicoSimple)
+            {
+                List<DetailsTransport> listeLignes = new List<DetailsTransport>();
+                foreach (string line in kvp.Value)
+                {
+                    DataDetailsTransport dataDetailsTransport = new DataDetailsTransport(new Connexion());
+                    DetailsTransport objetLigne = dataDetailsTransport.GetDetailsLine(line);
+                    listeLignes.Add(objetLigne);
+                }
+                dicoProximityLines.Add(kvp.Key, listeLignes);
+            }
+            return dicoProximityLines;
+        }
+
         public Unduplicate(IConnexion co)
         {
             this.connexion = co;

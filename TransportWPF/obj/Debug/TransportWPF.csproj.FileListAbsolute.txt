@@ -21,3 +21,4 @@ C:\Users\romain.joubert\source\repos\PublicTransport\TransportWPF\bin\Debug\Newt
 C:\Users\romain.joubert\source\repos\PublicTransport\TransportWPF\bin\Debug\MyLibrary.pdb
 C:\Users\romain.joubert\source\repos\PublicTransport\TransportWPF\bin\Debug\Newtonsoft.Json.xml
 C:\Users\romain.joubert\source\repos\PublicTransport\TransportWPF\obj\Debug\TransportWPF.csproj.CopyComplete
+C:\Users\romain.joubert\source\repos\PublicTransport\TransportWPF\obj\Debug\App.baml

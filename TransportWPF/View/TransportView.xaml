@@ -7,46 +7,54 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <ScrollViewer>
-    <Grid>
-        <StackPanel HorizontalAlignment = "Center">
-            <TextBlock Text="{Binding Path=MyTitle}" FontWeight="Bold" Height="41"></TextBlock>
-        </StackPanel>
-        <StackPanel>
-            <TextBlock Name="tbSelectSomeText">
-                <Label Content="Longitude :" />
-            <TextBox Margin="200 20 10 0" Text= "{Binding Path = Longitude}"/>
-                <Label Content="Latitude :" />
-            <TextBox Margin="0,0,10,0" Text= "{Binding Path = Latitude}"/>
-                <Label Content="Distance :" />
-            <TextBox Text= "{Binding Path = Distance}"  Margin="0,0,0,0" />
-             <!--<Button Click="OnClick">Valider</Button>-->
-            </TextBlock>
-        </StackPanel>
+        <Grid>
+            <StackPanel HorizontalAlignment = "Center">
+                <TextBlock Text="{Binding Path=MyTitle}" FontWeight="ExtraBold" FontSize="22" Height="41"></TextBlock>
+            </StackPanel>
+            <WrapPanel Margin="0 20 0 0" HorizontalAlignment="Center">
+                <TextBlock x:Name="tbSelectSomeText" HorizontalAlignment="Center" >
+                        <Label  Margin="50 0 0 0 " FontWeight="ExtraBold" FontSize="16" Content="Longitude :" />
+                    
+                        <TextBox Margin="0 20 10 0" Text= "{Binding Longitude}"/>
+                    
+                        <Label  FontWeight="ExtraBold" FontSize="16" Content="Latitude :" />
+                    
+                        <TextBox Margin="0,0,10,0" Text= "{Binding Latitude}"/>
+                    
+                        <Label FontWeight="ExtraBold" FontSize="16" Content="Distance :" />
+               
+                <TextBox Text= "{Binding Distance}"  Margin="0,0,0,0" />
+                    <InlineUIContainer></InlineUIContainer><Run Text=" "/>
+                </TextBlock>
+            </WrapPanel>
+            <WrapPanel Margin="0 50 0 0" HorizontalAlignment="Center">
+                <Button Content="Valider" Click="Button_Click"/>
+            </WrapPanel>
 
-        <StackPanel HorizontalAlignment = "Left" Margin="10,58,0,10">
-            <ItemsControl ItemsSource = "{Binding Path = Transports}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation = "Horizontal">
+            <StackPanel HorizontalAlignment = "Left" Margin="30,100,0,10">
+                <ItemsControl ItemsSource = "{Binding Path = Transports}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation = "Horizontal">
 
-                            <TextBox Text = "{Binding Path = Key, Mode = TwoWay}" Width = "250" Margin = "3 30 3 5"/>
-                            <ItemsControl ItemsSource = "{Binding Path = Value}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation = "Horizontal">
-                                            <TextBox Text = "{Binding .}" Width = "100" Margin = "3 20 3 5"/>
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
+                                <TextBox Text = "{Binding Path = Key, Mode = TwoWay}" Width = "250" Margin = "3 30 3 5"/>
+                                <ItemsControl ItemsSource = "{Binding Path = Value}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation = "Horizontal">
+                                                <TextBox Text = "{Binding Path=shortName}" Width = "100" Margin = "3 30 3 5"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
 
 
-                        </StackPanel>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
 
-        </StackPanel>
-    </Grid>
+            </StackPanel>
+        </Grid>
     </ScrollViewer>
 </UserControl>

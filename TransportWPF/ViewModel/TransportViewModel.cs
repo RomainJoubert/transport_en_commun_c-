@@ -1,4 +1,5 @@
 ﻿using MyLibrary;
+using Newtonsoft.Json;
 using PublicTransport;
 using System;
 using System.Collections.Generic;
@@ -64,7 +65,7 @@ namespace TransportWPF.ViewModel
                 {
                     longitude = value;
                     LoadTransports();
-                    RaisePropertyChanged("Longitude");
+                    //RaisePropertyChanged("Longitude");
 
                 }
             }
@@ -82,7 +83,7 @@ namespace TransportWPF.ViewModel
                 {
                     latitude = value;
                     LoadTransports();
-                    RaisePropertyChanged("Latitude");
+                    //RaisePropertyChanged("Latitude");
 
                 }
             }
@@ -99,7 +100,7 @@ namespace TransportWPF.ViewModel
                 {
                     distance = value;
                     LoadTransports();
-                    RaisePropertyChanged("Distance");
+                    //RaisePropertyChanged("Distance");
 
                 }
             }
@@ -118,7 +119,7 @@ namespace TransportWPF.ViewModel
         public void LoadTransports()
         {
             Unduplicate lb = new Unduplicate(new Connexion());
-            Dictionary<string, List<string>> resultat = lb.removeDuplicate(latitude, longitude, distance);
+            Dictionary<string, List<DetailsTransport>> resultat = lb.GetProximityLines(latitude, longitude, distance);
 
             MyTitle = "Lignes de transport de l'agglomération";
 
@@ -130,17 +131,19 @@ namespace TransportWPF.ViewModel
             //transports.Add(new Transport { BusStation = "Caserne de Bonne", BusLine = "SEM:14" });
 
             Transports = transports;
+
         }
 
-        public ObservableCollection<Transport> transformToCollection(Dictionary<string, List<string>> dico)
+        public ObservableCollection<Transport> transformToCollection(Dictionary<string, List<DetailsTransport>> dico)
         {
             ObservableCollection<Transport> listToReturn = new ObservableCollection<Transport>();
-            foreach (KeyValuePair<string, List<string>> kvp in dico)
+            foreach (KeyValuePair<string, List<DetailsTransport>> kvp in dico)
             {
                 Transport transport = new Transport(kvp.Key, kvp.Value);
                 listToReturn.Add(transport);
             }
             return listToReturn;
+
         }
     }
 }

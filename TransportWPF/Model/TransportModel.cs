@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,18 +10,14 @@ namespace TransportWPF.Model
 {
     public class Transport 
     {
-       
-
-        public Transport(string key, List<string> value)
+        public Transport(string key, List<DetailsTransport> value)
         {
             Key = key;
             Value = value;
         }
 
         public string Key { get; set; }
-        public List<string> Value { get; set; }
-
-      
+        public List<DetailsTransport> Value { get; set; }
     }
 
 

@@ -24,7 +24,8 @@ namespace TransportWPF
         {
             InitializeComponent();
             ViewModel.TransportViewModel station = new ViewModel.TransportViewModel();
-            TransportViewControl.DataContext = station;
+            TransportViewControl.DataContext = station;   
         }
+        
     }
 }
