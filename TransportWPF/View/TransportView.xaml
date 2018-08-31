@@ -6,15 +6,19 @@
              xmlns:local="clr-namespace:TransportWPF.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer>
     <Grid>
         <StackPanel HorizontalAlignment = "Center">
             <TextBlock Text="{Binding Path=MyTitle}" FontWeight="Bold" Height="41"></TextBlock>
         </StackPanel>
         <StackPanel>
             <TextBlock Name="tbSelectSomeText">
-            <TextBox Margin="200 20 10 0" Text="Longitude"/>
-            <TextBox Margin="0,0,10,0" Text="Latitude"/>
-            <TextBox Margin="0,0,0,0" Text="Distance"/>
+                <Label Content="Longitude :" />
+            <TextBox Margin="200 20 10 0" Text= "{Binding Path = Longitude}"/>
+                <Label Content="Latitude :" />
+            <TextBox Margin="0,0,10,0" Text= "{Binding Path = Latitude}"/>
+                <Label Content="Distance :" />
+            <TextBox Text= "{Binding Path = Distance}"  Margin="0,0,0,0" />
              <!--<Button Click="OnClick">Valider</Button>-->
             </TextBlock>
         </StackPanel>
@@ -30,7 +34,7 @@
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation = "Horizontal">
-                                            <TextBox Text = "{Binding .}" Width = "100" Margin = "3 30 3 5"/>
+                                            <TextBox Text = "{Binding .}" Width = "100" Margin = "3 20 3 5"/>
                                         </StackPanel>
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
@@ -44,4 +48,5 @@
 
         </StackPanel>
     </Grid>
+    </ScrollViewer>
 </UserControl>
