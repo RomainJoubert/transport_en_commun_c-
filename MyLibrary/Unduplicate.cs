@@ -51,6 +51,7 @@ namespace MyLibrary
             }
             return myDictionary;
         }
+
         public Unduplicate(IConnexion co)
         {
             this.connexion = co;

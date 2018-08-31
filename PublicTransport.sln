@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary", "MyLibrary\MyLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectTransportPublic", "UnitTestProjectTransportPublic\UnitTestProjectTransportPublic.csproj", "{C5F67B32-7570-44F7-A349-B68C9A311546}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportWPF", "TransportWPF\TransportWPF.csproj", "{0B9D19C1-318E-4C35-9C65-3E1133C0FDF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C5F67B32-7570-44F7-A349-B68C9A311546}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5F67B32-7570-44F7-A349-B68C9A311546}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5F67B32-7570-44F7-A349-B68C9A311546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9D19C1-318E-4C35-9C65-3E1133C0FDF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9D19C1-318E-4C35-9C65-3E1133C0FDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9D19C1-318E-4C35-9C65-3E1133C0FDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9D19C1-318E-4C35-9C65-3E1133C0FDF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

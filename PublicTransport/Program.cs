@@ -38,7 +38,6 @@ namespace PublicTransport
             foreach (KeyValuePair<string, List<string>> kvp in resultat)
             {
                 Console.WriteLine("Arret = " + kvp.Key);
-
                 foreach (string line in kvp.Value)
                 {
                    Console.WriteLine("      Ligne = " + detail.GetDetailsLine(line).shortName + "       couleur ligne = " + detail.GetDetailsLine(line).color + " nom ligne = " + detail.GetDetailsLine(line).longName);
